@@ -22,7 +22,7 @@ $(document).ready(function(){
     }
   });
 
-  $(".container").click(function (){
+  $(".wrapper").click(function (){
     $('.toc').attr('active',false);
     $(".left").slideLeft();
   });
