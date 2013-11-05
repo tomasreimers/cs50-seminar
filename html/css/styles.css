@@ -1,4 +1,6 @@
-
+body {
+    overflow-x: hidden;
+}
 .toc {
     position: absolute;
     top: 0;
@@ -34,4 +36,12 @@ a.toc_entry {
 
 a.toc_entry:hover {
     color: #cccccc;
+}
+
+.content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-left: 150px;
+    display: none;
 }
