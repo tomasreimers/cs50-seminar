@@ -1,0 +1,47 @@
+body {
+    overflow-x: hidden;
+}
+.toc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px;
+    margin: 5px;
+    z-index: 2;
+    background-color: #aaaaaa;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    color: #eeeeee;
+    cursor: pointer;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    width: 300px;
+    padding-top:50px;
+    padding-left: 15px;
+    /*display: none;*/
+    z-index: 1;
+    background-color: black;
+    color: #eeeeee;
+}
+
+a.toc_entry {
+    margin-top, margin-bottom: 3px;
+    color: #eeeeee;
+}
+
+a.toc_entry:hover {
+    color: #cccccc;
+}
+
+.content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-left: 150px;
+    display: none;
+}
