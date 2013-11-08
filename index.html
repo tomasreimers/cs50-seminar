@@ -20,7 +20,7 @@
         <div class='wrapper container'>
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <h1>
-                    Javascript for Web Apps
+                    Javascript <span class="shhh">(and CSS)</span> for Web Apps
                 </h1>
                 <h2>
                     Tomas Reimers &amp; Mike Rizzo
@@ -31,8 +31,8 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#start" data-toggle="tab">Getting Started</a></li>
-                <li><a href="#linking" data-toggle="tab">Libraries</a></li>
                 <li><a href="#dev" data-toggle="tab">Local Development</a></li>
+                <li><a href="#linking" data-toggle="tab">Libraries</a></li>
                 <li><a href="#css" data-toggle="tab">CSS</a></li>
                 <li><a href="#js" data-toggle="tab">JS</a></li>
             </ul>
@@ -78,49 +78,94 @@
                         Localhost
                     </h2>
                     <p>
-                        Is a specific domain that tells the browser to skip the domain lookup process and treat your own computer as a web server.
+                        Is a specific domain that tells the browser to skip the domain lookup process and treat your own computer as the destination web server.
                     </p>
                     <h2>
                         Permissions
                     </h2>
                     <p>
-                        Files have permissions regarding who may read, write, and execute them. There are three types of people who may be accessing a file, the owner, the group that owns the file, or everyone else. 
+                        Files have permissions regarding who may read, write, and execute them (for files this means to run them as with ./my_file and with directories this means to open them). There are three types of people who may be accessing a file, the owner, the group that owns the file, or everyone else. 
                     </p>
                     <p>
-                        If you wanted to be able to read/write your own file, but no one else: 
+                        If you wanted to be able to read/write your own file, but no one else to be able to:
+                        <ul>
+                            <li>
+                                <b>Owner:</b>
+                                <ul>
+                                    <li>Read: 1</li>
+                                    <li>Write: 1</li>
+                                    <li>Execute: 0</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Group:</b>
+                                <ul>
+                                    <li>Read: 0</li>
+                                    <li>Write: 0</li>
+                                    <li>Execute: 0</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>World:</b>
+                                <ul>
+                                    <li>Read: 0</li>
+                                    <li>Write: 0</li>
+                                    <li>Execute: 0</li>
+                                </ul>
+                            </li>
+                        </ul> 
+                    </p>
+                    <p>
+                        If you interperate the numbers as binary (owner: 110, group: 000, and world: 000) you get owner: 6, group: 0, and world: 0; this is how you would set the permissions to that file as 600.To do that you would execute:
+                    </p>
+                    <pre class="prettyprint lang-sh">chmod 600 my_file.html</pre>
+                    <p>
+                        Some common permissions:
+                        <ul>
+                            <li><b>Directories: </b> 711</li>
+                            <li><b>Images, CSS, JS, HTML: </b> 644</li>
+                            <li><b>PHP: </b> 600</li>
+                        </ul>
                     </p>
                     <h2>
                         index.html
                     </h2>
                     <p>
-
+                        If you do not specify a file to ask for, the web server will automatically return index.html (or index.php if present). So when you go to example.com, the actual file returned is example.com/index.html.
                     </p>
                 </div>
                 <div class="tab-pane" id="linking">
                     <h2>
-                        Finding a Library
+                        About Libraries
                     </h2>
                     <p>
-
+                        <b>Libraries (sometimes also called frameworks in this context)</b> are premade CSS/JS that you can use in your project. They speed up development time by allowing you to not write some common functions and instead focusing on the content specific to your site.
                     </p>
                     <h2>
                         Including a Library
                     </h2>
                     <p>
-
+                        Typically including a library is as easy as including an external JS file:
                     </p>
+                    <pre class="prettyprint lang-html">&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot;&gt;&lt;/script&gt;</pre>
+                    <p>
+                        or CSS file:
+                    </p>
+                    <pre class="prettyprint lang-html">&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;</pre>
                     <h2>
                         Using a Library
                     </h2>
                     <p>
-
+                        Javascript libraries usually expose other functions you can call without having to write them yourself (similarly to cs50.h). CSS libraries typically provide classes you can add to tags to style them.
                     </p>
                     <h2>
                         Open Source Licensing
                     </h2>
                     <p>
-
+                        Libraries are typically open-source projects, meaning the developer chose to make the source code freely available. With that said some authors elect to reserve certain rights, and thus include a LICENSE.txt with their project describing their stipulations to the use of their project (typically things like attribution, or that your project must not use their name). 
                     </p>
+                    <p>
+                        <a href="http://choosealicense.com/licenses/" target="_blank">http://choosealicense.com/</a>
                 </div>
                 <div class="tab-pane" id="css">
                     <h2>
@@ -239,6 +284,7 @@
         
         <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js/jquery-1.10.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/prettify/run_prettify.js?lang=css&skin=sunburst&auto_load=true"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>
