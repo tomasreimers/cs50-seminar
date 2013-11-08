@@ -271,33 +271,68 @@
                         DOM Element Selection
                     </h4>
                     <p>
-                        
+                        The majority of jQuery's methods require you to select an element or set of elements. Selecting an element is done in a very similar fashion to CSS selectors.                         
+                    </p>
+                    <pre class="prettyprint lang-js">$(".foo")</pre>
+                    <p>
+                        Will select all elements with class foo.
+                    </p>
+                    <pre class="prettyprint lang-js">$("#bar")</pre>
+                    <p>
+                        Will select all elements with id bar.
                     </p>
                     <h4>
                         DOM Element Manipulation
                     </h4>
                     <p>
-                        
+                        Once you have selected the element(s) you can do a wide range of things with them, including:                         
+                    </p>
+                    <pre class="prettyprint lang-js">$(".foo").css("color", "red");</pre>
+                    <p>
+                        Alter its CSS.
+                    </p>
+                    <pre class="prettyprint lang-js">$(".foo").html("Hello World!");</pre>
+                    <p>
+                        Alter its content.
+                    </p>
+                    <pre class="prettyprint lang-js">$(".foo").remove();</pre>
+                    <p>
+                        Delete it.
                     </p>
                     <h4>
                         DOM Element Animation
                     </h4>
                     <p>
-                        
+                        JQuery provides a wide range of animation capacities, both for transitions:
                     </p>
+                    <pre class="prettyprint lang-js">$(".foo").fadeOut();</pre>
+                    <p>
+                        or for aesthetic reasons:
+                    </p>
+<pre class="prettyprint lang-js">
+$(".foo").animate({
+    "width": "80px"
+});
+</pre>
                     <h4>
                         DOM Element Event Handling
                     </h4>
                     <p>
-                        
+                        Another cool thing that you can do with jQuery is listen for events:
                     </p>
-                    <h4>
-                        <a href="http://api.jquery.com/jQuery.ajax/">AJAX</a>
-                    </h4>
-                    <p>
-
-                    </p>
-                    <hr>
+<pre class="prettyprint lang-js">
+$(".foo").on("click", function (){
+    alert("Hi!");
+});
+</pre>
+<p>
+    Generally speaking,
+</p>
+<pre class="prettyprint lang-js">
+$(".foo").on("EVENT", function (){
+    // YOUR CODE HERE
+});
+</pre>    
                     <h2>
                         Bootstrap
                     </h2>
@@ -305,19 +340,22 @@
                         About
                     </h3>
                     <p>
-
+                        Bootstrap is both a CSS and a JS library. It gives a lot of classes to make pretty sites (without writing css), and it even includes normalize; it also has many JS functions to script interaction of common elements (Dropdown menus, tabs, etc.)
                     </p>
                     <h3>
                         Installation
                     </h3>
                     <p>
-                        
+                        See <a href="http://getbootstrap.com/getting-started/" target="_blank">getbootstrap.com</a>.
                     </p>
                     <h3>
                         Usage
                     </h3>
                     <p>
-                        
+                        Using the CSS component of Bootstrap is typically as easy as adding a few classes. To make a button you literally add the class btn and btn-primary (<a href="http://getbootstrap.com/css/#buttons" target="_blank">getbootstrap.com</a>).
+                    </p>
+                    <p>
+                        For the full list of JS components, see <a href="http://getbootstrap.com/javascript/" target="_blank">getbootstrap.com</a>.
                     </p>
                 </div>
                 <div class="tab-pane" id="more">
@@ -328,11 +366,30 @@
                         Realistically, the easiest way to do this is with Google. Simply decide what kind of component you are trying to factor out (do you want a Library which can give you icons? which makes dealing with times in JS easier? that provides powerful animation?) and search for a library (e.g. "javascript library for color manipulation").
                     </p>
                     <hr>
-                    <h2>
+                    <h3>
                         About Github
-                    </h2>
+                    </h3>
                     <p>
                         Almost undoubtedly you will run into <a href="https://github.com/" target="_blank">Github</a> at some point in your search for libraries, Github is one of the major code hosting websites. It uses a protocol called git for storing and uploading code; if you do not know what that is, don't worry about it - as you can also download a ZIP of the files in the bottom right of a project page (there is a button titled 'Download ZIP').
+                    </p>
+                    <h2>
+                        Troubleshooting
+                    </h2>
+                    <p>
+                        Eventually you are going to have an issue or question which you can't figure out. Like the rest of the course, always feel free to pop into discuss or talk to a TF, but when you're actually building sites those aren't typically options. Again, the advice here is to search the internet because a lot of developer resources exist already.
+                    </p>
+                    <hr>
+                    <h3>
+                        About StackOverflow
+                    </h3>
+                    <p>
+                        <a href="http://stackoverflow.com/" target="_blank">StackOverflow</a> is a question and answer site that is very popular among programmers. It is popular both because you can ask questions, but also because of the wealth of knowledge it has already amassed (Google a programming question, it already probably has an answer and is the first result).
+                    </p>
+                    <h3>
+                        About JSFiddle
+                    </h3>
+                    <p>
+                        <a href="http://jsfiddle.net/" target="_blank">JSFiddle</a> allows users to post small snippets of HTML/CSS/JS to show demos. This is very popular on sites like StackOverflow where people need to post a very small proof of concept or the code that is causing their issue.
                     </p>
                 </div>
             </div>
